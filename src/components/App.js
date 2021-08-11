@@ -5,7 +5,6 @@ import VideoList from "./VideoList";
 import { Container, Grid } from "semantic-ui-react";
 import VideoDetail from "./VideoDetail";
 
-
 const App = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -21,8 +20,6 @@ const App = () => {
     setSelectedVideo(response.data.items[0]);
   };
 
- 
-
   return (
     <Container>
       <SearchBar onFormSubmit={onTermSubmit} />
@@ -32,10 +29,8 @@ const App = () => {
             <VideoDetail video={selectedVideo} />
           </Grid.Column>
           <Grid.Column width={5}>
-           
-            
-            {/* <VideoList videos={videos} onVideoSelect={video =>setSelectedVideo(video)} />   */}
-<VideoList videos={videos} onVideoSelect={selectedVideo} /> 
+            <VideoList videos={videos} onVideoSelect={video =>setSelectedVideo(video)} />  
+            {/* <VideoList videos={videos} onVideoSelect={selectedVideo} /> */}
           </Grid.Column>
         </Grid.Row>
       </Grid>
