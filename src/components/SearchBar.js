@@ -20,7 +20,7 @@ const SearchBar = ({ onFormSubmit }) => {
     <div className="search-bar ui segment">
       <form onSubmit={onFSubmit} className="ui form"> 
         <div className="field">
-          <label>Video Search</label>
+          <label>Video Search - courtesy of V Lausell</label>
           {/* <input type="text" value={term} onChange={onInputChange} /> */}
           <input type="text" value={term} onChange={(event) => setTerm(event.target.value)} />
         </div>
